@@ -2,6 +2,7 @@ version: '3.7'
 networks:
   ev_network:
     driver: bridge
+name: simulators
 services:
   e-mobility-charging-stations-simulator:
     build:
