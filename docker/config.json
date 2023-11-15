@@ -1,11 +1,15 @@
 {
-  "supervisionUrls": ["ws://server:8010/OCPP16/5c866e81a2d9593de43efdb4"],
+  "supervisionUrls": [
+    "wss://cpo.test.evpassport.com",
+    "wss://cpo-beta.evpassport.com",
+    "wss://cpo.staging.evpassport.com"
+  ],
   "supervisionUrlDistribution": "round-robin",
   "log": {
-    "file": "/dev/stdout",
-    "errorFile": "/dev/stderr",
-    "console": false,
-    "rotate": false
+    "file": "logs/combined.log",
+    "errorFile": "dev/stderr",
+    "maxFiles": 3,
+    "statisticsInterval": 10
   },
   "worker": {
     "processType": "workerSet",
@@ -28,28 +32,20 @@
   },
   "stationTemplateUrls": [
     {
-      "file": "siemens.station-template.json",
-      "numberOfStations": 0
+      "file": "ezra.station-template.json",
+      "numberOfStations": 1
     },
     {
-      "file": "keba.station-template.json",
-      "numberOfStations": 0
+      "file": "larry.station-template.json",
+      "numberOfStations": 1
     },
     {
-      "file": "abb.station-template.json",
-      "numberOfStations": 0
+      "file": "howard.station-template.json",
+      "numberOfStations": 1
     },
     {
-      "file": "evlink.station-template.json",
-      "numberOfStations": 0
-    },
-    {
-      "file": "schneider.station-template.json",
-      "numberOfStations": 0
-    },
-    {
-      "file": "virtual-simple-atg.station-template.json",
-      "numberOfStations": 10
+      "file": "elaine.station-template.json",
+      "numberOfStations": 3
     }
   ]
 }
