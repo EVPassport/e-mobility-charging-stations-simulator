@@ -1,0 +1,97 @@
+{
+  "idTagsFile": "idtags.json",
+  "baseName": "2f03",
+  "fixedName": true,
+  "chargePointModel": "AXLU111001D1P1",
+  "chargePointVendor": "Zerova",
+  "firmwareVersionPattern": ".*",
+  "firmwareVersion": "V0.66.40.5111.P1",
+  "power": 11000,
+  "powerSharedByConnectors": true,
+  "powerUnit": "W",
+  "currentOutType": "DC",
+  "useConnectorId0": true,
+  "randomConnectors": false,
+  "resetTime": 60,
+  "enableStatistics": false,
+  "voltageOut": 400,
+  "Configuration": {
+    "configurationKey": [
+      {
+        "key": "MeterValuesSampledData",
+        "readonly": false,
+        "value": "SoC,Energy.Active.Import.Register,Power.Active.Import,Current.Import,Voltage"
+      },
+      {
+        "key": "MeterValueSampleInterval",
+        "readonly": false,
+        "value": "30"
+      },
+      {
+        "key": "SupportedFeatureProfiles",
+        "readonly": true,
+        "value": "Core,FirmwareManagement,LocalAuthListManagement,SmartCharging,RemoteTrigger,Reservation"
+      },
+      {
+        "key": "LocalAuthListEnabled",
+        "readonly": false,
+        "value": "false"
+      },
+      {
+        "key": "AuthorizeRemoteTxRequests",
+        "readonly": false,
+        "value": "false"
+      },
+      {
+        "key": "WebSocketPingInterval",
+        "readonly": false,
+        "value": "60"
+      },
+      {
+        "key": "ReserveConnectorZeroSupported",
+        "readonly": false,
+        "value": "false"
+      }
+    ]
+  },
+  "AutomaticTransactionGenerator": {
+    "enable": true,
+    "minDuration": 120,
+    "maxDuration": 360,
+    "minDelayBetweenTwoTransactions": 15,
+    "maxDelayBetweenTwoTransactions": 30,
+    "probabilityOfStart": 1,
+    "stopAfterHours": 0.3,
+    "requireAuthorize": true
+  },
+  "Connectors": {
+    "0": {},
+    "1": {
+      "MeterValues": [
+        {
+          "unit": "Percent",
+          "context": "Sample.Periodic",
+          "measurand": "SoC",
+          "location": "EV"
+        },
+        {
+          "unit": "V",
+          "context": "Sample.Periodic",
+          "measurand": "Voltage"
+        },
+        {
+          "unit": "W",
+          "measurand": "Power.Active.Import"
+        },
+        {
+          "unit": "A",
+          "context": "Sample.Periodic",
+          "measurand": "Current.Import"
+        },
+        {
+          "unit": "Wh"
+        }
+      ]
+    }
+  }
+}
