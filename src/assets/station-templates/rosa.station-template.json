@@ -1,6 +1,5 @@
 {
-  "idTagsFile": "idtags.json",
-  "baseName": "2f03",
+  "baseName": "CbzAAXKsMs",
   "fixedName": true,
   "chargePointModel": "AXLU111001D1P1",
   "chargePointVendor": "Zerova",
@@ -55,7 +54,7 @@
     ]
   },
   "AutomaticTransactionGenerator": {
-    "enable": true,
+    "enable": false,
     "minDuration": 120,
     "maxDuration": 360,
     "minDelayBetweenTwoTransactions": 15,

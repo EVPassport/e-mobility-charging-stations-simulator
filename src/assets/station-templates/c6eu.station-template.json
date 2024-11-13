@@ -1,5 +1,4 @@
 {
-  "idTagsFile": "idtags.json",
   "baseName": "2f03",
   "fixedName": true,
   "chargePointModel": "C6EU",
@@ -55,7 +54,7 @@
     ]
   },
   "AutomaticTransactionGenerator": {
-    "enable": true,
+    "enable": false,
     "minDuration": 120,
     "maxDuration": 360,
     "minDelayBetweenTwoTransactions": 15,
