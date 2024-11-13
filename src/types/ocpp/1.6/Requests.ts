@@ -15,7 +15,9 @@ export enum OCPP16AvailabilityType {
   Operative = 'Operative',
 }
 
-export enum OCPP16DataTransferVendorId {}
+export enum OCPP16DataTransferVendorId {
+  'org.openchargealliance.costmsg',
+}
 
 export enum OCPP16FirmwareStatus {
   Downloaded = 'Downloaded',
