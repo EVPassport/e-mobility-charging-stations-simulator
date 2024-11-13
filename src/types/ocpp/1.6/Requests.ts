@@ -178,7 +178,9 @@ export interface OCPP16TriggerMessageRequest extends JsonObject {
   requestedMessage: OCPP16MessageTrigger
 }
 
-export enum OCPP16DataTransferVendorId {}
+export enum OCPP16DataTransferVendorId {
+  "org.openchargealliance.costmsg"
+}
 
 export interface OCPP16DataTransferRequest extends JsonObject {
   data?: string
