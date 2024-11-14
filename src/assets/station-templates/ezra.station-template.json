@@ -44,7 +44,7 @@
       {
         "key": "WebSocketPingInterval",
         "readonly": false,
-        "value": "60"
+        "value": "30"
       },
       {
         "key": "ReserveConnectorZeroSupported",
