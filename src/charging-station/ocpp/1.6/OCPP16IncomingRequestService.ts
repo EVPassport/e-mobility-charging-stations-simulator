@@ -901,8 +901,11 @@ export class OCPP16IncomingRequestService extends OCPPIncomingRequestService {
     chargingStation: ChargingStation,
     commandPayload: OCPP16DataTransferRequest
   ): OCPP16DataTransferResponse {
-    const { vendorId } = commandPayload
+    const { messageId, vendorId, data } = commandPayload
     try {
+      logger.info(
+        `${chargingStation.logPrefix()} Received DataTransfer: ${messageId} : ${data}`
+      )
       if (Object.values(OCPP16DataTransferVendorId).includes(vendorId)) {
         return OCPP16Constants.OCPP_DATA_TRANSFER_RESPONSE_ACCEPTED
       }
