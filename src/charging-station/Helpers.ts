@@ -388,7 +388,7 @@ export const checkStationInfoConnectorStatus = (
     logger.warn(
       `${logPrefix} Charging station information from template ${templateFile} with connector id ${connectorId.toString()} status configuration defined, undefine it`
     )
-    delete connectorStatus.status
+    //delete connectorStatus.status
   }
 }
 
