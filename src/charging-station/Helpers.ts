@@ -303,7 +303,7 @@ export const getBootConnectorStatus = (
     connectorBootStatus = connectorStatus.status
   } else {
     // Set default status
-    connectorBootStatus = ConnectorStatusEnum.Available
+    connectorBootStatus = (process.env.CHARGESTATION_STATUS ? process.env.CHARGESTATION_STATUS : ConnectorStatusEnum.Available) as ConnectorStatusEnum
   }
   return connectorBootStatus
 }
