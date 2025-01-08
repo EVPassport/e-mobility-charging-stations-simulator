@@ -8,7 +8,7 @@
   "power": 11000,
   "powerSharedByConnectors": true,
   "powerUnit": "W",
-  "currentOutType": "DC",
+  "currentOutType": "AC",
   "useConnectorId0": true,
   "randomConnectors": false,
   "resetTime": 60,
