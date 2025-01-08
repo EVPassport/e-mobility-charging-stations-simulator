@@ -97,7 +97,7 @@ export const getChargingStationId = (
   const idSuffix = stationTemplate.nameSuffix ?? ''
   const idStr = `000000000${index.toString()}`
   return stationTemplate.fixedName === true
-    ? stationTemplate.baseName
+    ? (process.env.CHARGESTATION_ID ? process.env.CHARGESTATION_ID : stationTemplate.baseName)
     : `${stationTemplate.baseName}-${instanceIndex.toString()}${idStr.substring(
         idStr.length - 4
       )}${idSuffix}`
