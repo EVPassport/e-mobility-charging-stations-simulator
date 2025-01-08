@@ -597,6 +597,11 @@ export class Configuration {
 
   public static getSupervisionUrls (): string | string[] | undefined {
     if (
+      process.env.BACKEND_URL != null
+    ) {
+      Configuration.getConfigurationData()!.supervisionUrls = process.env.BACKEND_URL as string
+    }
+    else if (
       Configuration.getConfigurationData()?.['supervisionURLs' as keyof ConfigurationData] != null
     ) {
       // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
