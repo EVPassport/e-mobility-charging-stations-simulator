@@ -1,5 +1,4 @@
 {
-  "idTagsFile": "idtags.json",
   "baseName": "SIMULATOR-EZRA",
   "fixedName": true,
   "chargePointModel": "AWLU770001T2P1",
@@ -68,12 +67,6 @@
     "0": {},
     "1": {
       "MeterValues": [
-        {
-          "unit": "Percent",
-          "context": "Sample.Periodic",
-          "measurand": "SoC",
-          "location": "EV"
-        },
         {
           "unit": "V",
           "context": "Sample.Periodic",

@@ -1,8 +1,6 @@
 {
   "supervisionUrls": [
-    "wss://cpo.test.evpassport.com",
-    "wss://cpo-beta.evpassport.com",
-    "wss://cpo.staging.evpassport.com"
+    "ws://voltnet.test.evpassport.com"
   ],
   "supervisionUrlDistribution": "round-robin",
   "log": {
@@ -34,18 +32,6 @@
     {
       "file": "ezra.station-template.json",
       "numberOfStations": 1
-    },
-    {
-      "file": "larry.station-template.json",
-      "numberOfStations": 1
-    },
-    {
-      "file": "howard.station-template.json",
-      "numberOfStations": 1
-    },
-    {
-      "file": "elaine.station-template.json",
-      "numberOfStations": 3
     }
   ]
 }

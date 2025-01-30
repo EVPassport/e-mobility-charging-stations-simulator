@@ -1,25 +1,25 @@
 {
-  "baseName": "SIMULATOR-HOWARD",
+  "baseName": "SIMULATOR-JOINT",
   "fixedName": true,
-  "chargePointModel": "CC",
-  "chargePointVendor": "IoTecha",
+  "chargePointModel": "EVM002/80A",
+  "chargePointVendor": "Joint",
   "firmwareVersionPattern": ".*",
-  "firmwareVersion": "Mo-MBS-v2.2.4-MYD-0-g39b66b4e",
-  "power": 19200,
-  "powerUnit": "W",
+  "firmwareVersion": "V0.74.40.2770.P1",
+  "power": 7680,
   "powerSharedByConnectors": true,
-  "currentOutType": "AC",
-  "numberOfConnectors": 1,
+  "powerUnit": "W",
+  "currentOutType": "DC",
   "useConnectorId0": true,
   "randomConnectors": false,
-  "resetTime": 30,
-  "enableStatistics": true,
+  "resetTime": 60,
+  "enableStatistics": false,
+  "voltageOut": 400,
   "Configuration": {
     "configurationKey": [
       {
         "key": "MeterValuesSampledData",
         "readonly": false,
-        "value": "SoC,Energy.Active.Import.Register,Voltage"
+        "value": "SoC,Energy.Active.Import.Register,Power.Active.Import,Current.Import,Voltage"
       },
       {
         "key": "MeterValueSampleInterval",
@@ -29,7 +29,7 @@
       {
         "key": "SupportedFeatureProfiles",
         "readonly": true,
-        "value": "Core,LocalAuthListManagement"
+        "value": "Core,FirmwareManagement,LocalAuthListManagement,SmartCharging,RemoteTrigger,Reservation"
       },
       {
         "key": "LocalAuthListEnabled",
@@ -44,19 +44,23 @@
       {
         "key": "WebSocketPingInterval",
         "readonly": false,
-        "value": "60"
+        "value": "30"
+      },
+      {
+        "key": "ReserveConnectorZeroSupported",
+        "readonly": false,
+        "value": "false"
       }
     ]
   },
   "AutomaticTransactionGenerator": {
     "enable": false,
-    "minDuration": 60,
-    "maxDuration": 80,
+    "minDuration": 120,
+    "maxDuration": 360,
     "minDelayBetweenTwoTransactions": 15,
     "maxDelayBetweenTwoTransactions": 30,
     "probabilityOfStart": 1,
     "stopAfterHours": 0.3,
-    "stopOnConnectionFailure": false,
     "requireAuthorize": true
   },
   "Connectors": {

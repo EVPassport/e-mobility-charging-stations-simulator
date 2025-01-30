@@ -1,6 +1,6 @@
 {
-  "idTagsFile": "authorization-tags.json",
   "baseName": "SIMULATOR-ELAINE",
+  "fixedName": true,
   "chargePointModel": "DWWx301",
   "chargePointVendor": "Zerovatech",
   "power": 30000,
@@ -62,8 +62,27 @@
     "1": {
       "MeterValues": [
         {
-          "unit": "Wh",
-          "context": "Sample.Periodic"
+          "unit": "Percent",
+          "context": "Sample.Periodic",
+          "measurand": "SoC",
+          "location": "EV"
+        },
+        {
+          "unit": "V",
+          "context": "Sample.Periodic",
+          "measurand": "Voltage"
+        },
+        {
+          "unit": "W",
+          "measurand": "Power.Active.Import"
+        },
+        {
+          "unit": "A",
+          "context": "Sample.Periodic",
+          "measurand": "Current.Import"
+        },
+        {
+          "unit": "Wh"
         }
       ]
     }

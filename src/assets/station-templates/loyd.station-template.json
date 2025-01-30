@@ -1,6 +1,5 @@
 {
-  "idTagsFile": "idtags.json",
-  "baseName": "2f03",
+  "baseName": "SIMULATOR-LOYD",
   "fixedName": true,
   "chargePointModel": "DSWU601U0UD2N7",
   "chargePointVendor": "Zerova",

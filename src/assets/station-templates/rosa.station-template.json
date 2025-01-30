@@ -1,6 +1,5 @@
 {
-  "idTagsFile": "idtags.json",
-  "baseName": "2f03",
+  "baseName": "SIMULATOR-ROSA",
   "fixedName": true,
   "chargePointModel": "AXLU111001D1P1",
   "chargePointVendor": "Zerova",
@@ -9,7 +8,7 @@
   "power": 11000,
   "powerSharedByConnectors": true,
   "powerUnit": "W",
-  "currentOutType": "DC",
+  "currentOutType": "AC",
   "useConnectorId0": true,
   "randomConnectors": false,
   "resetTime": 60,
@@ -45,7 +44,7 @@
       {
         "key": "WebSocketPingInterval",
         "readonly": false,
-        "value": "60"
+        "value": "30"
       },
       {
         "key": "ReserveConnectorZeroSupported",
@@ -55,7 +54,7 @@
     ]
   },
   "AutomaticTransactionGenerator": {
-    "enable": true,
+    "enable": false,
     "minDuration": 120,
     "maxDuration": 360,
     "minDelayBetweenTwoTransactions": 15,
@@ -68,12 +67,6 @@
     "0": {},
     "1": {
       "MeterValues": [
-        {
-          "unit": "Percent",
-          "context": "Sample.Periodic",
-          "measurand": "SoC",
-          "location": "EV"
-        },
         {
           "unit": "V",
           "context": "Sample.Periodic",
